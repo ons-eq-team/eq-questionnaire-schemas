@@ -19,7 +19,7 @@ local question(title, label) = {
       label: '',
       options: [
         {
-          label: 'Straight',
+          label: 'Straight or Heterosexual',
           value: 'Straight or Heterosexual',
         },
         {
