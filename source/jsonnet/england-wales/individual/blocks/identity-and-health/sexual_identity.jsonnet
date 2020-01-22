@@ -19,7 +19,7 @@ local question(title, label) = {
       label: '',
       options: [
         {
-          label: 'Straight or Heterosexual',
+          label: 'Straight',
           value: 'Straight or Heterosexual',
         },
         {
@@ -38,6 +38,7 @@ local question(title, label) = {
             type: 'TextField',
             mandatory: false,
             label: label,
+            voluntary: true,
             visible: true,
           },
         },

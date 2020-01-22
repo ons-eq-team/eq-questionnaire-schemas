@@ -68,11 +68,12 @@ local question(title, region_code) = (
               id: 'religion-answer-other',
               type: 'TextField',
               mandatory: false,
+              voluntary: true,
               label: 'Enter religion',
             },
           },
         ],
-        type: 'Checkbox',
+        type: 'Radio',
       },
     ],
   }
