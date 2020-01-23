@@ -30,6 +30,7 @@ local question(title, region_code) = (
         id: 'religion-answer',
         mandatory: false,
         label: '',
+        voluntary: true,
         options: [
           {
             label: 'No religion',
@@ -68,7 +69,6 @@ local question(title, region_code) = (
               id: 'religion-answer-other',
               type: 'TextField',
               mandatory: false,
-              voluntary: true,
               label: 'Enter religion',
             },
           },

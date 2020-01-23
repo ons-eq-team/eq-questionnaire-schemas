@@ -17,6 +17,7 @@ local question(title, label) = {
       id: 'birth-gender-answer',
       mandatory: false,
       label: '',
+      voluntary: true,
       options: [
         {
           label: 'Yes',
@@ -29,7 +30,6 @@ local question(title, label) = {
             id: 'birth-gender-answer-other',
             type: 'TextField',
             mandatory: false,
-            voluntary: true,
             label: label,
             visible: true,
           },
