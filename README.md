@@ -33,6 +33,6 @@ Remove the `/schemas` directory if it already exists
 
 Create a symbolic link pointing at your generated census schema files by running the following command:
 ```
-ln -s /eq-questionnaire-schemas/schemas /eq-questionnaire-runner/schemas
+ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas <PATH_TO_REPO>/eq-questionnaire-runner/schemas
 ```
 You should now be able launch a questionnaire using one of the cenus schemas.
