@@ -217,5 +217,4 @@ local editQuestion(questionTitle) = {
     title: 'Household members',
     item_title: summaryTitlePersonName,
   },
-  show_on_section_summary: false,
 }

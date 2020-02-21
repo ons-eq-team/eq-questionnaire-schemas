@@ -163,5 +163,4 @@ local removePersonQuestionTitle = {
     title: summaryTitle,
     item_title: summaryTitlePersonName,
   },
-  show_on_section_summary: true,
 }
