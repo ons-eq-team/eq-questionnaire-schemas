@@ -1,3 +1,19 @@
+local placeholders = import '../../../lib/placeholders.libsonnet';
+
+local summaryTitlePersonName = {
+  text: '{person_name}',
+  placeholders: [
+    placeholders.personName,
+  ],
+};
+
+local summaryTitle = {
+  text: 'Visitors staying overnight on {census_date}',
+  placeholders: [
+    placeholders.censusDate,
+  ],
+};
+
 // Accommodation
 local accommodation_introduction = import 'household/blocks/accommodation/accommodation_introduction.jsonnet';
 local accommodation_summary = import 'household/blocks/accommodation/accommodation_summary.jsonnet';
@@ -133,6 +149,24 @@ function(region_code) {
     {
       id: 'who-lives-here-section',
       title: 'People who live here',
+      summary: [
+        {
+          type: 'List',
+          for_list: 'household',
+          title: 'Household members',
+          add_link_text: 'Add someone to this household',
+          empty_list_text: 'There are no householders',
+          item_title: summaryTitlePersonName,
+        },
+        {
+          type: 'List',
+          for_list: 'vistors',
+          title: summaryTitle,
+          add_link_text: 'Add someone to this household',
+          empty_list_text: 'There are no householders',
+          item_title: summaryTitlePersonName,
+        }
+      ]
       groups: [
         {
           id: 'who-lives-here-group',
