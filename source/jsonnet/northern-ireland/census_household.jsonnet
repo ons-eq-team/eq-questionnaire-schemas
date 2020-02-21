@@ -1,4 +1,4 @@
-local placeholders = import '../../../lib/placeholders.libsonnet';
+local placeholders = import '../../lib/placeholders.libsonnet';
 
 local summaryTitlePersonName = {
   text: '{person_name}',
@@ -166,7 +166,7 @@ function(region_code) {
           empty_list_text: 'There are no householders',
           item_title: summaryTitlePersonName,
         }
-      ]
+      ],
       groups: [
         {
           id: 'who-lives-here-group',

@@ -1,3 +1,12 @@
+local placeholders = import '../../lib/placeholders.libsonnet';
+
+local summaryTitle = {
+  text: 'Visitors staying overnight on {census_date}',
+  placeholders: [
+    placeholders.censusDate,
+  ],
+};
+
 local summaryTitlePersonName = {
   text: '{person_name}',
   placeholders: [
@@ -156,14 +165,16 @@ function(region_code, census_month_year_date) {
       summary: [
         {
           type: 'List',
-          for_list: 'household'
+          for_list: 'household',
+          title: 'Household members',
           add_link_text: 'Add someone to this household',
           empty_list_text: 'There are no householders',
           item_title: summaryTitlePersonName,
         },
         {
           type: 'List',
-          for_list: 'visitors'
+          for_list: 'visitors',
+          title: summaryTitle,
           add_link_text: 'Add a visitor',
           empty_list_text: 'There are no visitors',
           item_title: summaryTitlePersonName,
