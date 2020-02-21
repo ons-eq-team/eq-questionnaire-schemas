@@ -1,3 +1,12 @@
+local placeholders = import '../../lib/placeholders.libsonnet';
+
+local summaryTitlePersonName = {
+  text: '{person_name}',
+  placeholders: [
+    placeholders.personName,
+  ],
+};
+
 // Who lives here
 local another_address_interviewer_note_interstitial = import 'ccs/blocks/who-lives-here/another_address_interviewer_note_interstitial.jsonnet';
 local any_visitors = import 'ccs/blocks/who-lives-here/any_visitors.jsonnet';
@@ -91,6 +100,22 @@ function(region_code, census_month_year_date) {
     {
       id: 'who-lives-here-section',
       title: 'People who live here',
+      summary: [
+        {
+          type: 'List',
+          for_list: 'household',
+          add_link_text: 'Add someone to this household',
+          empty_list_text: 'There are no householders',
+          item_title: summaryTitlePersonName,
+        },
+        {
+          type: 'List',
+          for_list: 'visitor',
+          add_link_text: 'Add a visitor',
+          empty_list_text: 'There are no visitors',
+          item_title: summaryTitlePersonName,
+        }
+      ],
       groups: [
         {
           id: 'who-lives-here-group',

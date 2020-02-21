@@ -162,8 +162,6 @@ local removePersonQuestionTitle = {
   summary: {
     title: summaryTitle,
     item_title: summaryTitlePersonName,
-    add_link_text: 'Add a visitor',
-    empty_list_text: 'There are no visitors',
   },
   show_on_section_summary: true,
 }
