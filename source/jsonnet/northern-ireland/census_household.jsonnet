@@ -165,7 +165,7 @@ function(region_code) {
           add_link_text: 'Add someone to this household',
           empty_list_text: 'There are no householders',
           item_title: summaryTitlePersonName,
-        }
+        },
       ],
       groups: [
         {

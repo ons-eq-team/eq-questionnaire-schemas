@@ -123,7 +123,7 @@ function(region_code, census_month_year_date) {
           add_link_text: 'Add a visitor',
           empty_list_text: 'There are no visitors',
           item_title: summaryTitlePersonName,
-        }
+        },
       ],
       groups: [
         {
