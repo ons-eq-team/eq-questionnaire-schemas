@@ -14,6 +14,7 @@ local questionTitle = {
   type: 'ListCollectorDrivingQuestion',
   for_list: 'visitor',
   id: 'any-visitors',
+  show_on_section_summary: false,
   question: {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',

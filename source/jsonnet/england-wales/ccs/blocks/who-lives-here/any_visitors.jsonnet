@@ -4,6 +4,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   type: 'ListCollectorDrivingQuestion',
   for_list: 'visitor',
   id: 'any-visitors',
+  show_on_section_summary: false,
   question: {
     type: 'General',
     id: 'any-visitors-question',

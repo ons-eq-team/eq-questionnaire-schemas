@@ -12,6 +12,7 @@
       ],
     },
   ],
+  show_on_section_summary: false,
   question: {
     id: 'relationships-question',
     title: 'Are any of these people related to each other?',
