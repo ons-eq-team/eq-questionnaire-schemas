@@ -64,5 +64,6 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: schemas
+      - run: make run-validator
       - name: Validate schemas
         run: make validate-schemas
