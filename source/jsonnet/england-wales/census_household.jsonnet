@@ -210,6 +210,17 @@ function(region_code, census_month_year_date) {
           ],
         },
       ],
+      enabled: [
+        {
+          when: [
+            {
+              list: 'household',
+              condition: 'greater than',
+              value: 1,
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'accommodation-section',
@@ -298,8 +309,8 @@ function(region_code, census_month_year_date) {
             ethnic_group(region_code),
             ethnic_group_white(region_code),
             ethnic_group_mixed,
-            ethnic_group_asian,
-            ethnic_group_black,
+            ethnic_group_asian(region_code),
+            ethnic_group_black(region_code),
             ethnic_group_other,
             religion(region_code),
           ] + understandWelshBlock(region_code) + [

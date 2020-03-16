@@ -659,9 +659,6 @@ msgid ""
 "away or who has been or intends to be in the UK for 3 months or more."
 msgstr ""
 
-msgid "Names of visitors staying overnight at this address on 13 October 2019"
-msgstr ""
-
 msgid ""
 "People who work away from home within the UK if this is their permanent "
 "or family home"
@@ -744,6 +741,9 @@ msgstr ""
 msgid ""
 "In this section, we’re going to ask you about the people living or "
 "staying at {household_address}."
+msgstr ""
+
+msgid "Names of visitors staying overnight at this address on {census_date}"
 msgstr ""
 
 msgid "Do you usually live at {household_address}?"
@@ -1285,13 +1285,6 @@ msgctxt ""
 "Answer for: Are there any visitors staying overnight on {census_date} at "
 "{household_address}?"
 msgid "People here on holiday"
-msgstr ""
-
-#. answer-id: any-visitors-answer-exclusive
-msgctxt ""
-"Answer for: Are there any visitors staying overnight on {census_date} at "
-"{household_address}?"
-msgid "No, there are no visitors staying overnight on 13 October 2019"
 msgstr ""
 
 #. answer-id: first-name
@@ -4956,6 +4949,13 @@ msgid ""
 "housemates, tenants and lodgers, students and schoolchildren who live "
 "away from home during term time, where this is their permanent or family "
 "home"
+msgstr ""
+
+#. answer-id: any-visitors-answer-exclusive
+msgctxt ""
+"Answer for: Are there any visitors staying overnight on {census_date} at "
+"{household_address}?"
+msgid "No, there are no visitors staying overnight on {census_date}"
 msgstr ""
 
 #. answer-id: relationship-answer

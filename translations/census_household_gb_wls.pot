@@ -8,11 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-<<<<<<< HEAD
 "POT-Creation-Date: 2020-02-25 12:51+0000\n"
-=======
-"POT-Creation-Date: 2020-02-25 10:39+0000\n"
->>>>>>> master
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -617,9 +613,6 @@ msgstr ""
 msgid "When did you most recently arrive to live in the United Kingdom?"
 msgstr ""
 
-msgid "Did you arrive in the UK on or after 21 March 2020?"
-msgstr ""
-
 msgid ""
 "Including the time already spent here, how long do you intend to stay in "
 "the United Kingdom?"
@@ -649,13 +642,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Which one best describes your Asian or Asian British ethnic group or "
-"background?"
+"Which one best describes your Asian, Asian Welsh or Asian British ethnic "
+"group or background?"
 msgstr ""
 
 msgid ""
-"Which one best describes your Black, Black British, Caribbean or African "
-"ethnic group or background?"
+"Which one best describes your Black, Black Welsh, Black British, "
+"Caribbean or African ethnic group or background?"
 msgstr ""
 
 msgid "Which one best describes your other ethnic group or background?"
@@ -847,9 +840,6 @@ msgid ""
 "away or who has been or intends to be in the UK for 3 months or more."
 msgstr ""
 
-msgid "Names of visitors staying overnight at this address on 13 October 2019"
-msgstr ""
-
 msgid ""
 "People who work away from home within the UK if this is their permanent "
 "or family home"
@@ -941,6 +931,9 @@ msgstr ""
 msgid ""
 "In this section, we’re going to ask you about the people living or "
 "staying at {household_address}."
+msgstr ""
+
+msgid "Names of visitors staying overnight at this address on {census_date}"
 msgstr ""
 
 msgid "Do you usually live at {household_address}?"
@@ -1092,7 +1085,12 @@ msgid ""
 "United Kingdom?"
 msgstr ""
 
-msgid "Did <em>{person_name}</em> arrive in the UK on or after 21 March 2020?"
+msgid "Did you arrive in the UK on or after {year_before_census_date}?"
+msgstr ""
+
+msgid ""
+"Did <em>{person_name}</em> arrive in the UK on or after "
+"{year_before_census_date}?"
 msgstr ""
 
 msgid ""
@@ -1123,13 +1121,13 @@ msgid ""
 msgstr ""
 
 msgid ""
-"Which one best describes <em>{person_name_possessive}</em> Asian or Asian"
-" British ethnic group or background?"
+"Which one best describes <em>{person_name_possessive}</em> Asian, Asian "
+"Welsh or Asian British ethnic group or background?"
 msgstr ""
 
 msgid ""
 "Which one best describes <em>{person_name_possessive}</em> Black, Black "
-"British, Caribbean or African ethnic group or background?"
+"Welsh, Black British, Caribbean or African ethnic group or background?"
 msgstr ""
 
 msgid ""
@@ -1493,13 +1491,6 @@ msgctxt ""
 "Answer for: Are there any visitors staying overnight on {census_date} at "
 "{household_address}?"
 msgid "People here on holiday"
-msgstr ""
-
-#. answer-id: any-visitors-answer-exclusive
-msgctxt ""
-"Answer for: Are there any visitors staying overnight on {census_date} at "
-"{household_address}?"
-msgid "No, there are no visitors staying overnight on 13 October 2019"
 msgstr ""
 
 #. answer-id: first-name
@@ -2657,26 +2648,30 @@ msgid "Enter the current name of the country"
 msgstr ""
 
 #. answer-id: when-arrive-in-uk-answer
-msgctxt "Answer for: Did you arrive in the UK on or after 21 March 2020?"
+msgctxt ""
+"Answer for: Did you arrive in the UK on or after "
+"{year_before_census_date}?"
 msgid "Yes"
 msgstr ""
 
 #. answer-id: when-arrive-in-uk-answer
-msgctxt "Answer for: Did you arrive in the UK on or after 21 March 2020?"
+msgctxt ""
+"Answer for: Did you arrive in the UK on or after "
+"{year_before_census_date}?"
 msgid "No"
 msgstr ""
 
 #. answer-id: when-arrive-in-uk-answer
 msgctxt ""
-"Answer for: Did <em>{person_name}</em> arrive in the UK on or after 21 "
-"March 2020?"
+"Answer for: Did <em>{person_name}</em> arrive in the UK on or after "
+"{year_before_census_date}?"
 msgid "Yes"
 msgstr ""
 
 #. answer-id: when-arrive-in-uk-answer
 msgctxt ""
-"Answer for: Did <em>{person_name}</em> arrive in the UK on or after 21 "
-"March 2020?"
+"Answer for: Did <em>{person_name}</em> arrive in the UK on or after "
+"{year_before_census_date}?"
 msgid "No"
 msgstr ""
 
@@ -2912,12 +2907,12 @@ msgstr ""
 
 #. answer-id: ethnic-group-answer
 msgctxt "Answer for: What is your ethnic group?"
-msgid "Asian or Asian British"
+msgid "Asian, Asian Welsh or Asian British"
 msgstr ""
 
 #. answer-id: ethnic-group-answer
 msgctxt "Answer for: What is your ethnic group?"
-msgid "Black, Black British, Caribbean or African"
+msgid "Black, Black Welsh, Black British, Caribbean or African"
 msgstr ""
 
 #. answer-id: ethnic-group-answer
@@ -2937,12 +2932,12 @@ msgstr ""
 
 #. answer-id: ethnic-group-answer
 msgctxt "Answer for: What is <em>{person_name_possessive}</em> ethnic group?"
-msgid "Asian or Asian British"
+msgid "Asian, Asian Welsh or Asian British"
 msgstr ""
 
 #. answer-id: ethnic-group-answer
 msgctxt "Answer for: What is <em>{person_name_possessive}</em> ethnic group?"
-msgid "Black, Black British, Caribbean or African"
+msgid "Black, Black Welsh, Black British, Caribbean or African"
 msgstr ""
 
 #. answer-id: ethnic-group-answer
@@ -3106,155 +3101,160 @@ msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Indian"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Pakistani"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Bangladeshi"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Chinese"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Any other Asian background"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer-other
 msgctxt ""
-"Answer for: Which one best describes your Asian or Asian British ethnic "
-"group or background?"
+"Answer for: Which one best describes your Asian, Asian Welsh or Asian "
+"British ethnic group or background?"
 msgid "Enter Asian background"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Indian"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Pakistani"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Bangladeshi"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Chinese"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Any other Asian background"
 msgstr ""
 
 #. answer-id: asian-ethnic-group-answer-other
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Asian or Asian British ethnic group or background?"
+"Asian, Asian Welsh or Asian British ethnic group or background?"
 msgid "Enter Asian background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Black, Black British, Caribbean"
-" or African ethnic group or background?"
+"Answer for: Which one best describes your Black, Black Welsh, Black "
+"British, Caribbean or African ethnic group or background?"
 msgid "Caribbean"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Black, Black British, Caribbean"
-" or African ethnic group or background?"
+"Answer for: Which one best describes your Black, Black Welsh, Black "
+"British, Caribbean or African ethnic group or background?"
 msgid "African"
 msgstr ""
 
 #. answer-id: african-ethnic-group-answer-other
 msgctxt ""
-"Answer for: Which one best describes your Black, Black British, Caribbean"
-" or African ethnic group or background?"
+"Answer for: Which one best describes your Black, Black Welsh, Black "
+"British, Caribbean or African ethnic group or background?"
 msgid "Enter African background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
-"Answer for: Which one best describes your Black, Black British, Caribbean"
-" or African ethnic group or background?"
+"Answer for: Which one best describes your Black, Black Welsh, Black "
+"British, Caribbean or African ethnic group or background?"
 msgid "Any other Black, Black British or Caribbean background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer-other
 msgctxt ""
-"Answer for: Which one best describes your Black, Black British, Caribbean"
-" or African ethnic group or background?"
+"Answer for: Which one best describes your Black, Black Welsh, Black "
+"British, Caribbean or African ethnic group or background?"
 msgid "Enter Black, Black British or Caribbean background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Black, Black British, Caribbean or African ethnic group or background?"
+"Black, Black Welsh, Black British, Caribbean or African ethnic group or "
+"background?"
 msgid "Caribbean"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Black, Black British, Caribbean or African ethnic group or background?"
+"Black, Black Welsh, Black British, Caribbean or African ethnic group or "
+"background?"
 msgid "African"
 msgstr ""
 
 #. answer-id: african-ethnic-group-answer-other
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Black, Black British, Caribbean or African ethnic group or background?"
+"Black, Black Welsh, Black British, Caribbean or African ethnic group or "
+"background?"
 msgid "Enter African background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Black, Black British, Caribbean or African ethnic group or background?"
+"Black, Black Welsh, Black British, Caribbean or African ethnic group or "
+"background?"
 msgid "Any other Black, Black British or Caribbean background"
 msgstr ""
 
 #. answer-id: black-ethnic-group-answer-other
 msgctxt ""
 "Answer for: Which one best describes <em>{person_name_possessive}</em> "
-"Black, Black British, Caribbean or African ethnic group or background?"
+"Black, Black Welsh, Black British, Caribbean or African ethnic group or "
+"background?"
 msgid "Enter Black, Black British or Caribbean background"
 msgstr ""
 
@@ -5112,6 +5112,13 @@ msgid ""
 "housemates, tenants and lodgers, students and schoolchildren who live "
 "away from home during term time, where this is their permanent or family "
 "home"
+msgstr ""
+
+#. answer-id: any-visitors-answer-exclusive
+msgctxt ""
+"Answer for: Are there any visitors staying overnight on {census_date} at "
+"{household_address}?"
+msgid "No, there are no visitors staying overnight on {census_date}"
 msgstr ""
 
 #. answer-id: relationship-answer
