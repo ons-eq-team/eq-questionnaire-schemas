@@ -173,7 +173,7 @@ function(region_code, census_month_year_date) {
         },
         {
           type: 'List',
-          for_list: 'visitors',
+          for_list: 'visitor',
           title: summaryTitle,
           add_link_text: 'Add a visitor',
           empty_list_text: 'There are no visitors',
