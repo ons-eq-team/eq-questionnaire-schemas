@@ -150,24 +150,26 @@ function(region_code) {
     {
       id: 'who-lives-here-section',
       title: 'People who live here',
-      summary: [
-        {
-          type: 'List',
-          for_list: 'household',
-          title: 'Household members',
-          add_link_text: 'Add someone to this household',
-          empty_list_text: 'There are no householders',
-          item_title: summaryTitlePersonName,
-        },
-        {
-          type: 'List',
-          for_list: 'vistors',
-          title: summaryTitle,
-          add_link_text: 'Add someone to this household',
-          empty_list_text: 'There are no householders',
-          item_title: summaryTitlePersonName,
-        },
-      ],
+      summary: {
+        "items": [
+          {
+            type: 'List',
+            for_list: 'household',
+            title: 'Household members',
+            add_link_text: 'Add someone to this household',
+            empty_list_text: 'There are no householders',
+            item_title: summaryTitlePersonName,
+          },
+          {
+            type: 'List',
+            for_list: 'vistors',
+            title: summaryTitle,
+            add_link_text: 'Add someone to this household',
+            empty_list_text: 'There are no householders',
+            item_title: summaryTitlePersonName,
+          },
+        ]
+      },
       groups: [
         {
           id: 'who-lives-here-group',
