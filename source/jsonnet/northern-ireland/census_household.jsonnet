@@ -151,7 +151,7 @@ function(region_code) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
-        "items": [
+        items: [
           {
             type: 'List',
             for_list: 'household',
@@ -168,7 +168,7 @@ function(region_code) {
             empty_list_text: 'There are no householders',
             item_title: summaryTitlePersonName,
           },
-        ]
+        ],
       },
       groups: [
         {
