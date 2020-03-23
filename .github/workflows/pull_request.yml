@@ -53,11 +53,6 @@ jobs:
   validate-schemas:
     needs: build
     runs-on: ubuntu-latest
-    services:
-      validator:
-        image: onsdigital/eq-questionnaire-validator:custom-section-summaries
-        ports:
-          - 5001:5000
     steps:
       - uses: actions/checkout@v2
       - name: Download built schemas
