@@ -171,7 +171,6 @@ function(region_code, census_month_year_date) {
             title: 'Household members',
             add_link_text: 'Add someone to this household',
             empty_list_text: 'There are no householders',
-            item_title: summaryTitlePersonName,
           },
           {
             type: 'List',
@@ -179,7 +178,6 @@ function(region_code, census_month_year_date) {
             title: summaryTitle,
             add_link_text: 'Add a visitor',
             empty_list_text: 'There are no visitors',
-            item_title: summaryTitlePersonName,
           },
         ],
       },

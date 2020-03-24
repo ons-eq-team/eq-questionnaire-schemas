@@ -158,7 +158,6 @@ function(region_code) {
             title: 'Household members',
             add_link_text: 'Add someone to this household',
             empty_list_text: 'There are no householders',
-            item_title: summaryTitlePersonName,
           },
           {
             type: 'List',
@@ -166,7 +165,6 @@ function(region_code) {
             title: summaryTitle,
             add_link_text: 'Add someone to this household',
             empty_list_text: 'There are no householders',
-            item_title: summaryTitlePersonName,
           },
         ],
       },
