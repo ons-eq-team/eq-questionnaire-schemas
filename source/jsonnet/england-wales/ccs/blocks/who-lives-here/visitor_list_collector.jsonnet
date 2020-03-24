@@ -1,51 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle = {
-  text: 'Were there any other visitors staying overnight on {census_date} at {household_address}?',
-  placeholders: [
-    placeholders.censusDate,
-    placeholders.address,
-  ],
-};
-
-local summaryTitle = {
-  text: 'Visitors staying overnight on {census_date}',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
-local summaryTitlePersonName = {
-  text: '{person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local addVisitorQuestionTitle = {
-  text: 'What is the name of the visitor staying overnight on {census_date} at {household_address}?',
-  placeholders: [
-    placeholders.censusDate,
-    placeholders.address,
-  ],
-};
-
-local editPersonQuestionTitle = {
-  text: 'Change details for {person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local removePersonQuestionTitle = {
-  text: 'Are you sure you want to remove {person_name}?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-
 {
   id: 'visitor-list-collector',
   type: 'ListCollector',
@@ -61,7 +16,13 @@ local removePersonQuestionTitle = {
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
-    title: questionTitle,
+    title: {
+      text: 'Were there any other visitors staying overnight on {census_date} at {household_address}?',
+      placeholders: [
+        placeholders.censusDate,
+        placeholders.address,
+      ],
+    },
     answers: [
       {
         id: 'visitor-answer',
@@ -87,7 +48,13 @@ local removePersonQuestionTitle = {
     question: {
       id: 'visitor-add-question',
       type: 'General',
-      title: addVisitorQuestionTitle,
+      title: {
+        text: 'What is the name of the visitor staying overnight on {census_date} at {household_address}?',
+        placeholders: [
+          placeholders.censusDate,
+          placeholders.address,
+        ],
+      },
       instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
       answers: [
         {
@@ -111,7 +78,12 @@ local removePersonQuestionTitle = {
     question: {
       id: 'visitor-edit-question',
       type: 'General',
-      title: editPersonQuestionTitle,
+      title: {
+        text: 'Change details for {person_name}',
+        placeholders: [
+          placeholders.personName,
+        ],
+      },
       answers: [
         {
           id: 'first-name',
@@ -139,7 +111,12 @@ local removePersonQuestionTitle = {
           title: 'All of the data entered about this person will be deleted',
         }],
       },
-      title: removePersonQuestionTitle,
+      title: {
+        text: 'Are you sure you want to remove {person_name}?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      },
       answers: [
         {
           id: 'visitor-remove-confirmation',
@@ -160,7 +137,17 @@ local removePersonQuestionTitle = {
     },
   },
   summary: {
-    title: summaryTitle,
-    item_title: summaryTitlePersonName,
+    title: {
+      text: 'Visitors staying overnight on {census_date}',
+      placeholders: [
+        placeholders.censusDate,
+      ],
+    },
+    item_title: {
+      text: '{person_name}',
+      placeholders: [
+        placeholders.personName,
+      ],
+    },
   },
 }

@@ -1,19 +1,5 @@
 local placeholders = import '../../lib/placeholders.libsonnet';
 
-local summaryTitle = {
-  text: 'Visitors staying overnight on {census_date}',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
-local summaryTitlePersonName = {
-  text: '{person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 // Accommodation
 local accommodation_introduction = import 'household/blocks/accommodation/accommodation_introduction.jsonnet';
 local accommodation_summary = import 'household/blocks/accommodation/accommodation_summary.jsonnet';
@@ -175,7 +161,12 @@ function(region_code, census_month_year_date) {
           {
             type: 'List',
             for_list: 'visitors',
-            title: summaryTitle,
+            title: {
+              text: 'Visitors staying overnight on {census_date}',
+              placeholders: [
+                placeholders.censusDate,
+              ],
+            },
             add_link_text: 'Add a visitor',
             empty_list_text: 'There are no visitors',
           },

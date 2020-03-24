@@ -1,21 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle = {
-  text: 'Are there any visitors staying overnight on {census_date} at {household_address}?',
-  placeholders: [
-    placeholders.censusDate,
-    placeholders.address,
-  ],
-};
-
-local exclusiveAnswerText = {
-  text: 'No, there are no visitors staying overnight on {census_date}',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
 {
   type: 'ListCollectorDrivingQuestion',
   for_list: 'visitors',
@@ -23,7 +8,13 @@ local exclusiveAnswerText = {
   question: {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',
-    title: questionTitle,
+    title: {
+      text: 'Are there any visitors staying overnight on {census_date} at {household_address}?',
+      placeholders: [
+        placeholders.censusDate,
+        placeholders.address,
+      ],
+    },
     mandatory: true,
     answers: [
       {
@@ -92,7 +83,12 @@ local exclusiveAnswerText = {
         type: 'Checkbox',
         options: [
           {
-            label: exclusiveAnswerText,
+            label: {
+              text: 'No, there are no visitors staying overnight on {census_date}',
+              placeholders: [
+                placeholders.censusDate,
+              ],
+            },
             value: 'No, there are no visitors staying overnight on {census_date}',
           },
         ],
