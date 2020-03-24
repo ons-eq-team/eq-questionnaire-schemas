@@ -49,7 +49,7 @@ local removePersonQuestionTitle = {
 {
   id: 'visitor-list-collector',
   type: 'ListCollector',
-  for_list: 'visitor',
+  for_list: 'visitors',
   add_answer: {
     id: 'visitor-answer',
     value: 'Yes',

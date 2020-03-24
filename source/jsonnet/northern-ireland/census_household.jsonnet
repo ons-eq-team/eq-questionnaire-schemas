@@ -363,7 +363,7 @@ function(region_code) {
       id: 'visitor-section',
       title: 'Visitors',
       repeat: {
-        for_list: 'visitor',
+        for_list: 'visitors',
         title: {
           text: '{person_name} (Visitor)',
           placeholders: [

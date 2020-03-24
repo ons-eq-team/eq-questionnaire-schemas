@@ -174,7 +174,7 @@ function(region_code, census_month_year_date) {
           },
           {
             type: 'List',
-            for_list: 'visitor',
+            for_list: 'visitors',
             title: summaryTitle,
             add_link_text: 'Add a visitor',
             empty_list_text: 'There are no visitors',
@@ -382,7 +382,7 @@ function(region_code, census_month_year_date) {
       id: 'visitor-section',
       title: 'Visitors',
       repeat: {
-        for_list: 'visitor',
+        for_list: 'visitors',
         title: {
           text: '{person_name} (Visitor)',
           placeholders: [
