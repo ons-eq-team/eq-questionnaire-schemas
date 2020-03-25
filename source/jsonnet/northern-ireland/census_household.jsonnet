@@ -147,7 +147,7 @@ function(region_code) {
           },
           {
             type: 'List',
-            for_list: 'vistors',
+            for_list: 'visitors',
             title: {
               text: 'Visitors staying overnight on {census_date}',
               placeholders: [
