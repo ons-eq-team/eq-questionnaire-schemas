@@ -6,11 +6,14 @@ on:
       - v*
 
 jobs:
-  - name: Notify Runner
-    uses: peter-evans/repository-dispatch@v1.0.0
-    with:
-      token: ${{ secrets.TOKEN }}
-      repository: ONSdigital/eq-questionnaire-runner
+  notify-runner:
+    steps:
+      - name: Notify Runner
+        uses: peter-evans/repository-dispatch@v1.0.0
+        with:
+          token: ${{ secrets.TOKEN }}
+          repository: ONSdigital/eq-questionnaire-runner
+          event-type: schemas_release
   build:
     runs-on: ubuntu-latest
     steps:
