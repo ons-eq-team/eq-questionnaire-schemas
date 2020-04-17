@@ -6,7 +6,7 @@ on:
       - v*
 
 jobs:
-  name: Repository Dispatch
+  name: Notify Runner
     uses: peter-evans/repository-dispatch@v1
     with:
       token: ${{ secrets.TOKEN }}
