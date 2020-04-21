@@ -40,7 +40,7 @@ local pastProxyTitle = {
   ],
 };
 
-{
+function(routingRuleLastMainJobElement, routingRuleLastMainJobValue) {
   type: 'Question',
   id: 'supervise',
   question_variants: [
@@ -64,7 +64,7 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        [routingRuleLastMainJobElement]: routingRuleLastMainJobValue,
         when: [
           rules.lastMainJob,
         ],

@@ -71,7 +71,7 @@ local proxyGuidanceContent = [
   },
 ];
 
-{
+function(routingRuleDefaultElement, routingRuleDefaultValue) {
   type: 'Question',
   id: 'employer-address-workplace',
   question_variants: [
@@ -87,7 +87,7 @@ local proxyGuidanceContent = [
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        [routingRuleDefaultElement]: routingRuleDefaultValue,
       },
     },
   ],

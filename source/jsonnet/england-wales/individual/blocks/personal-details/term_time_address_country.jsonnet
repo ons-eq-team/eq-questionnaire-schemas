@@ -1,4 +1,4 @@
-{
+function(routingRuleSummaryElement, routingRuleSummaryValue) {
   type: 'Question',
   id: 'term-time-address-country',
   question: {
@@ -50,7 +50,7 @@
     },
     {
       goto: {
-        group: 'submit-group',
+        [routingRuleSummaryElement]: routingRuleSummaryValue,
       },
     },
   ],

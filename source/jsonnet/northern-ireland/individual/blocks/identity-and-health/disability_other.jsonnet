@@ -70,7 +70,7 @@ local proxyTitle = {
   ],
 };
 
-{
+function(routingRuleUnder4Element, routingRuleUnder4Value) {
   type: 'Question',
   id: 'disability-other',
   question_variants: [
@@ -86,7 +86,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        [routingRuleUnder4Element]: routingRuleUnder4Value,
         when: [rules.under4],
       },
     },

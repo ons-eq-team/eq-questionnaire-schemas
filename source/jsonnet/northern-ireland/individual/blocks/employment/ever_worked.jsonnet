@@ -39,7 +39,7 @@ local proxyTitle = {
 };
 local proxyLabel = 'No, has never worked';
 
-{
+function(routingRuleDefaultElement, routingRuleDefaultValue) {
   type: 'Question',
   id: 'ever-worked',
   question_variants: [
@@ -81,7 +81,7 @@ local proxyLabel = 'No, has never worked';
     },
     {
       goto: {
-        group: 'submit-group',
+        [routingRuleDefaultElement]: routingRuleDefaultValue,
       },
     },
   ],

@@ -2,7 +2,6 @@ local placeholders = import '../../lib/placeholders.libsonnet';
 
 // Accommodation
 local accommodation_introduction = import 'household/blocks/accommodation/accommodation_introduction.jsonnet';
-local accommodation_summary = import 'household/blocks/accommodation/accommodation_summary.jsonnet';
 local accommodation_type = import 'household/blocks/accommodation/accommodation_type.jsonnet';
 local central_heating = import 'household/blocks/accommodation/central_heating.jsonnet';
 local number_bedrooms = import 'household/blocks/accommodation/number_bedrooms.jsonnet';
@@ -20,7 +19,6 @@ local anyone_else_temporarily_away_list_collector = import 'household/blocks/who
 local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
 local visitor_list_collector = import 'household/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'household/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
-local who_lives_here_section_summary = import 'household/blocks/who-lives-here/who_lives_here_section_summary.jsonnet';
 
 // Relationships
 local relationships_collector = import 'household/blocks/relationships/relationships_collector.jsonnet';
@@ -127,9 +125,9 @@ local usual_household_address_other = import 'household/blocks/visitor/usual_hou
 
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
-
+local routingRuleSectionEndElement = 'section';
+local routingRuleSectionEndValue = 'end';
 local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [understand_welsh] else [];
-
 
 function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
@@ -200,7 +198,6 @@ function(region_code, census_month_year_date) {
             anyone_else_temporarily_away_list_collector,
             any_visitors,
             visitor_list_collector,
-            who_lives_here_section_summary,
           ],
         },
       ],
@@ -234,6 +231,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
+      summary: {},
       groups: [
         {
           id: 'accommodation-group',
@@ -249,7 +247,6 @@ function(region_code, census_month_year_date) {
             own_or_rent,
             who_rent_from,
             number_of_vehicles,
-            accommodation_summary,
           ],
         },
       ],
@@ -257,6 +254,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'individual-section',
       title: 'Individual Section',
+      summary: {},
       repeat: {
         for_list: 'household',
         title: {
@@ -300,10 +298,10 @@ function(region_code, census_month_year_date) {
             other_uk_address,
             address_type,
             in_education,
-            term_time_location,
-            term_time_address_country,
-            term_time_address_country_outside_uk,
-            term_time_address_details,
+            term_time_location(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            term_time_address_country(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            term_time_address_country_outside_uk(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            term_time_address_details(routingRuleSectionEndElement, routingRuleSectionEndValue),
           ],
         },
         {
@@ -342,9 +340,9 @@ function(region_code, census_month_year_date) {
             passports_other,
             passports_additional_other,
             health,
-            disability,
-            disability_limitation,
-            carer,
+            disability(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            disability_limitation(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            carer(routingRuleSectionEndElement, routingRuleSectionEndValue),
             sexual_identity,
             birth_gender,
           ],
@@ -372,31 +370,21 @@ function(region_code, census_month_year_date) {
             jobseeker,
             job_availability,
             job_pending,
-            ever_worked,
+            ever_worked(routingRuleSectionEndElement, routingRuleSectionEndValue),
             main_employment_block,
             main_job_type,
             business_name,
             job_title,
             job_description,
             employers_business(region_code),
-            supervise,
+            supervise(routingRuleSectionEndElement, routingRuleSectionEndValue),
             hours_worked,
             work_travel,
-            employer_type_of_address,
+            employer_type_of_address(routingRuleSectionEndElement, routingRuleSectionEndValue),
             mainly_work_in_uk,
-            employer_address_workplace,
-            employer_address_depot,
+            employer_address_workplace(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            employer_address_depot(routingRuleSectionEndElement, routingRuleSectionEndValue),
             mainly_work_outside_uk,
-          ],
-        },
-        {
-          id: 'submit-group',
-          title: 'Summary',
-          blocks: [
-            {
-              id: 'summary',
-              type: 'SectionSummary',
-            },
           ],
         },
       ],
@@ -404,6 +392,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'visitor-section',
       title: 'Visitors',
+      summary: {},
       repeat: {
         for_list: 'visitors',
         title: {
@@ -438,16 +427,6 @@ function(region_code, census_month_year_date) {
             usual_household_address,
             usual_household_address_details,
             usual_household_address_other,
-          ],
-        },
-        {
-          id: 'visitor-submit-group',
-          title: 'Summary',
-          blocks: [
-            {
-              id: 'visitor-summary',
-              type: 'SectionSummary',
-            },
           ],
         },
       ],
