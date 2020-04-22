@@ -6,15 +6,6 @@ on:
       - v*
 
 jobs:
-  notify-runner:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Notify Runner
-        uses: peter-evans/repository-dispatch@v1.0.0
-        with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: ONSdigital/eq-questionnaire-runner
-          event-type: schemas_release
   build:
     runs-on: ubuntu-latest
     steps:
@@ -84,3 +75,13 @@ jobs:
           files: schemas.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  notify-runner:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Runner
+        uses: peter-evans/repository-dispatch@v1.0.0
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: ONSdigital/eq-questionnaire-runner
+          event-type: schemas_release
