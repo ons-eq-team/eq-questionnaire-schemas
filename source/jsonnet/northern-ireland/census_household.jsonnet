@@ -29,9 +29,9 @@ local relationships_interstitial = import 'household/blocks/relationships/relati
 // Personal Details
 local individual_interstitial = import 'household/blocks/individual/individual_interstitial.jsonnet';
 local proxy = import 'household/blocks/individual/proxy.jsonnet';
+local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local confirm_dob = import 'individual/blocks/personal-details/confirm_dob.jsonnet';
 local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.jsonnet';
-local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
 local marriage_type = import 'individual/blocks/personal-details/marriage_type.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';

@@ -1,8 +1,8 @@
 // Personal Details
 local accommodation_type = import 'individual/blocks/personal-details/accommodation_type.jsonnet';
+local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local confirm_dob = import 'individual/blocks/personal-details/confirm_dob.jsonnet';
 local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.jsonnet';
-local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local establishment_position = import 'individual/blocks/personal-details/establishment_position.jsonnet';
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
 local marriage_type = import 'individual/blocks/personal-details/marriage_type.jsonnet';
